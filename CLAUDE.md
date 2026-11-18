@@ -49,9 +49,9 @@ The club emblem is a cyan line drawing on black: a ring-tailed lemur on the roof
 
 - `brand/emblem-source.png` — the approved artwork (owner-generated raster, 1254px).
 - `brand/emblem.svg` — vector trace of it (Recraft vectorizer; ~1 MB, 1200+ paths, so it is a master file, not something to serve). `brand/` is outside `docs/` and is not published.
-- `docs/favicon.ico` (16/32/48), `docs/favicon.png` (192), `docs/apple-touch-icon.png` (180) — rendered from the SVG, cropped square to the artwork.
+- `docs/favicon.ico` (16/32/48), `docs/favicon.png` (192), `docs/apple-touch-icon.png` (180) — rendered from the SVG, cropped square to the artwork and recoloured from the artwork's cyan to the site accent `#2bff80`. The masters in `brand/` stay cyan.
 
-To regenerate: `rsvg-convert -w 2508 -h 2508 brand/emblem.svg`, crop `2080x2080+214+164`, resize. For the `.ico` sizes, thicken the lines first (`-morphology Dilate Disk:7 -level 0%,70%`) or they vanish when shrunk.
+To regenerate: `rsvg-convert -w 2508 -h 2508 brand/emblem.svg`, crop `2080x2080+214+164`, tint (`-colorspace Gray -auto-level`, then `+level-colors black,#2bff80` after resizing), resize. For the `.ico` sizes, thicken the lines first (`-morphology Dilate Disk:7 -level 0%,70%`) or they vanish when shrunk.
 
 ## Updating for a new meeting
 
