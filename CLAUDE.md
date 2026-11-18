@@ -49,11 +49,19 @@ To regenerate: `rsvg-convert -w 2508 -h 2508 brand/emblem.svg`, crop `2080x2080+
 
 ## Updating for a new meeting
 
-The `#vstrecha` section in `docs/index.html` is the only part that changes per meeting:
+One command makes the poster and updates the site:
 
-1. Replace `docs/afisha.jpg` with the new poster (square; the `alt` text should restate what the poster says).
-2. Update the heading, `<time datetime>`, the date/time line and the «Читаем / Где / Цена» rows.
-3. Update `og:description` and the `<meta name="description">` date in `<head>`.
+```
+tools/afisha PHOTO DD.MM.YYYY HH:MM "PLACE"
+tools/afisha ~/Downloads/photo.jpg 26.11.2026 19:00 "ЂЂ"
+```
+
+- Renders `tools/afisha.html` (a 1080×1080 template in the site's style: green band with the wordmark, the photo cropped to a wide strip, black band with date, weekday, time, place; `misk.club` top right) through headless Chromium and writes `docs/afisha.jpg`.
+- Rewrites the date, time, weekday and place in the `#vstrecha` section of `docs/index.html`, the poster `alt`, and the dates in the two description meta tags. It finds these by regex on the existing markup (`<time datetime>`, `<p class="time">`, `<img class="poster" … alt>`), so keep those elements recognisable when editing the page. The «Читаем / Где / Цена» rows are not touched and still need editing by hand.
+- `--out FILE` writes the poster elsewhere and leaves the site alone (use this for trying things). `--title` changes the line above the wordmark (default «Новый сезон института»).
+- It does not commit or push. PLACE is written as it reads after «в».
+
+The template duplicates the colours and font stack from `docs/style.css`; change both together.
 
 ## Placeholders still in the site
 
