@@ -34,11 +34,13 @@ Headless screenshots only capture the window, so use a tall `--window-size` heig
 
 ## Design
 
-Brutalist poster style, modelled on the club's own event posters (`docs/afisha.jpg`): a photo, acid green, a plain grotesque, information stated bluntly and large. Earlier bookish directions (cream paper and serifs; cloth-binding cover) were rejected by the owner as templated and too prim — do not drift back toward them.
+Minimal, following https://brutalist-web.design/ literally: one narrow column of plain text and a single image (the poster, `docs/afisha.jpg`). The owner rejected, in order, bookish designs (templated, too prim) and a loud poster-style layout with coloured full-width sections, giant type and buttons — do not drift back toward either.
 
-- Three colours only, defined as custom properties in `docs/style.css`: `--green` (sampled from the poster), black, white. Sections alternate these as full-width blocks.
-- One system font stack (Helvetica/Arial); no font files.
-- The wordmark in the header is sized in `vw` to span the viewport. Its width depends on the fallback font, so re-check for clipping at desktop and mobile widths if the name or size changes.
+- No sections, navigation, cards, buttons or decoration. A heading, the poster, a few paragraphs.
+- Always dark: background `#111`, text `#ddd`, and one accent, the poster's green `#2bff80`, used only for the h1 and links (visited links stay green). No light variant.
+- Typography follows that site's scale but is sans-serif throughout (the owner rejected the serif body): Helvetica/Arial stack, 21px base, line-height 1.5 in a 34em column, headings at line-height 1 (h1 5rem, shrinking on narrow screens; h2 2.25rem). No font files.
+- `docs/style.css` is under thirty lines; keep it that way.
+- Links are plain underlined hyperlinks. No buttons: nothing on the page is a form action.
 - Copy is short and direct, written to the reader in the informal «ты».
 
 ## Emblem and icons
@@ -53,15 +55,15 @@ To regenerate: `rsvg-convert -w 2508 -h 2508 brand/emblem.svg`, crop `2080x2080+
 
 ## Updating for a new meeting
 
-The `#vstrecha` section in `docs/index.html` is the only part that changes per meeting:
+Only `docs/index.html` and the poster change per meeting:
 
 1. Replace `docs/afisha.jpg` with the new poster (square; the `alt` text should restate what the poster says).
-2. Update the heading, `<time datetime>`, the date/time line and the «Читаем / Где / Цена» rows.
+2. Update the `<h2>`, the `<time datetime>` line and the «Темы / Место / Цена» paragraphs.
 3. Update `og:description` and the `<meta name="description">` date in `<head>`.
 
 ## Content status
 
-The page has two sections: the next meeting (`#vstrecha`) and the venue (`#gde`). The rules and price sections were removed at the owner's request; do not bring them back unasked.
+The page is one block of text about the next meeting. Rules and a separate price section were removed at the owner's request; do not bring them back unasked.
 
 - Venue is Чердак Чая (tea house), Belgrade, Despota Đurđa 5; map and directions links point to Yandex, Google and the venue's Telegram post.
 - Price is 500 dinars plus tea, with a link to the venue's menu.
