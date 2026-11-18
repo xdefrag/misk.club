@@ -37,6 +37,16 @@ Brutalist poster style, modelled on the club's own event posters (`docs/afisha.j
 - The wordmark in the header is sized in `vw` to span the viewport. Its width depends on the fallback font, so re-check for clipping at desktop and mobile widths if the name or size changes.
 - Copy is short and direct, written to the reader in the informal «ты».
 
+## Emblem and icons
+
+The club emblem is a cyan line drawing on black: a ring-tailed lemur on the roof of a pagoda (a reference to Nick Land's teleoplexy; the lemur and the fact that it stands on a pagoda are both essential). It is used only as the favicon; the owner does not want it on the page itself, so do not add it to the layout.
+
+- `brand/emblem-source.png` — the approved artwork (owner-generated raster, 1254px).
+- `brand/emblem.svg` — vector trace of it (Recraft vectorizer; ~1 MB, 1200+ paths, so it is a master file, not something to serve). `brand/` is outside `docs/` and is not published.
+- `docs/favicon.ico` (16/32/48), `docs/favicon.png` (192), `docs/apple-touch-icon.png` (180) — rendered from the SVG, cropped square to the artwork.
+
+To regenerate: `rsvg-convert -w 2508 -h 2508 brand/emblem.svg`, crop `2080x2080+214+164`, resize. For the `.ico` sizes, thicken the lines first (`-morphology Dilate Disk:7 -level 0%,70%`) or they vanish when shrunk.
+
 ## Updating for a new meeting
 
 The `#vstrecha` section in `docs/index.html` is the only part that changes per meeting:
