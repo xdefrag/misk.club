@@ -131,60 +131,19 @@ dt { font-weight: 900; text-transform: uppercase; }
   box-shadow: none;
 }
 
-/* ─── Правила ─── */
-
-.rules ol {
-  margin-top: 1.2em;
-  padding: 0;
-  list-style: none;
-  counter-reset: r;
-  max-width: 46rem;
-}
-.rules li {
-  counter-increment: r;
-  position: relative;
-  min-height: 2.6em;
-  padding: .55em 0 .55em 2.6em;
-  border-top: 3px solid var(--black);
-  font-size: 1.15em;
-}
-.rules li::before {
-  content: counter(r);
-  position: absolute;
-  left: 0;
-  top: .14em;
-  font-size: 2.1em;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -.05em;
-}
-
-/* ─── Цена ─── */
-
-.price { background: var(--green); }
-.sum {
-  font-size: clamp(7rem, 34vw, 22rem);
-  font-weight: 900;
-  line-height: .8;
-  letter-spacing: -.06em;
-  margin: .1em 0 .12em -.04em;
-}
-.price p + p { margin-top: .7em; }
-.price p:not(.sum) { max-width: 30rem; font-weight: 700; }
-
 /* ─── Где ─── */
 
-.place { background: var(--black); color: var(--white); }
-.place .button { box-shadow: 8px 8px 0 var(--white); }
-.place dl { max-width: 46rem; }
+.place { background: var(--green); }
 .address {
   margin-top: .5em;
   font-size: clamp(1.7rem, 5.2vw, 3.4rem);
   font-weight: 900;
   line-height: 1.02;
   letter-spacing: -.03em;
-  color: var(--green);
 }
+.buttons { display: flex; flex-wrap: wrap; gap: 1.4rem 1.8rem; margin: 1.6em 0 8px; }
+.place .button { background: var(--white); }
+.place .button:hover { background: var(--black); color: var(--green); }
 
 footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem; font-weight: 800; }
 

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A one-page site for the Russian-language book club «Мискатоник» (Институт Мискатоник), served at https://misk.club by GitHub Pages. All site copy is in Russian.
+A one-page site for «Институт Мискатоник», a Russian-language discussion circle in Belgrade, served at https://misk.club by GitHub Pages. It is an institute, not a book club — never call it «книжный клуб». Meetings have a list of discussion topics, not a set book. All site copy is in Russian.
 
 ## Hard constraints
 
@@ -59,6 +59,11 @@ The `#vstrecha` section in `docs/index.html` is the only part that changes per m
 2. Update the heading, `<time datetime>`, the date/time line and the «Читаем / Где / Цена» rows.
 3. Update `og:description` and the `<meta name="description">` date in `<head>`.
 
-## Placeholders still in the site
+## Content status
 
-Real values have not been supplied for: the book, the venue address and directions, the price (shown as `000`, currency unknown), and the links marked `CHANGE_ME` (Telegram, map). The venue name «ЂЂ» and the address `hello@misk.club` are guesses. Ask the owner rather than inventing replacements.
+The page has two sections: the next meeting (`#vstrecha`) and the venue (`#gde`). The rules and price sections were removed at the owner's request; do not bring them back unasked.
+
+- Venue is Чердак Чая (tea house), Belgrade, Despota Đurđa 5; map and directions links point to Yandex, Google and the venue's Telegram post.
+- Price is 500 dinars plus tea, with a link to the venue's menu.
+- The only contact is the owner's Telegram, `t.me/xdefrag`.
+- Topics for the next meeting are «TBA» until the owner supplies them.
