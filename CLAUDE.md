@@ -38,7 +38,7 @@ Minimal, following https://brutalist-web.design/ literally: one narrow column of
 
 - No sections, navigation, cards, buttons or decoration. A heading, the poster, a few paragraphs.
 - Always dark: background `#111`, text `#ddd`, and one accent, the poster's green `#2bff80`, used only for the h1 and links (visited links stay green). No light variant.
-- Typography follows that site's scale but is sans-serif throughout (the owner rejected the serif body): Helvetica/Arial stack, 21px base, line-height 1.5 in a 34em column, headings at line-height 1 (h1 5rem, shrinking on narrow screens; h2 2.25rem). No font files.
+- Typography follows that site's scale but is sans-serif throughout (the owner rejected the serif body): Helvetica/Arial stack, 21px base, line-height 1.5 in a 34em column, headings at line-height 1 (h1 5rem, shrinking on narrow screens, with «Институт» as a smaller `<small>` line above «Мискатоник», like "Guidelines for" on that site; h2 2.25rem). No font files.
 - `docs/style.css` is under thirty lines; keep it that way.
 - Links are plain underlined hyperlinks. No buttons: nothing on the page is a form action.
 - Copy is short and direct, written to the reader in the informal «ты».
