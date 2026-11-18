@@ -39,7 +39,8 @@ Minimal, following https://brutalist-web.design/ literally: one narrow column of
 - No sections, navigation, cards, buttons or decoration. A heading, the poster, a few paragraphs.
 - Always dark: background `#111`, text `#ddd`, and one accent, the poster's green `#2bff80`, used only for the h1 and links (visited links stay green). No light variant.
 - Typography follows that site's scale but is sans-serif throughout (the owner rejected the serif body): Helvetica/Arial stack, 21px base, line-height 1.5 in a 34em column, headings at line-height 1 (h1 5rem, shrinking on narrow screens, with «Институт» as a smaller `<small>` line above «Мискатоник», like "Guidelines for" on that site; h2 2.25rem). No font files.
-- `docs/style.css` is under thirty lines; keep it that way.
+- Styling is done with Tachyons utility classes in the HTML (https://tachyons.io/docs/), so the owner can edit content without touching CSS. `docs/tachyons.min.css` is v4.12.0 vendored locally — never link it from a CDN. `docs/style.css` holds only what Tachyons lacks (21px base, text colour, the green accent, `lst-square`/`lsp-outside`); keep it that small and prefer a Tachyons class over a new rule.
+- The topics list copies the list on that site: `<ul class="f4 mt0 pl0-ns pl3 lst-square lsp-outside">` — square bullets that hang outside the column on wide screens.
 - Links are plain underlined hyperlinks. No buttons: nothing on the page is a form action.
 - Copy is short and direct, written to the reader in the informal «ты».
 
@@ -58,7 +59,7 @@ To regenerate: `rsvg-convert -w 2508 -h 2508 brand/emblem.svg`, crop `2080x2080+
 Only `docs/index.html` and the poster change per meeting:
 
 1. Replace `docs/afisha.jpg` with the new poster (square; the `alt` text should restate what the poster says).
-2. Update the `<h2>`, the `<time datetime>` line and the «Темы / Место / Цена» paragraphs.
+2. Update the `<h2>`, the `<time datetime>` line, the «Темы» list (one `<li>` per topic) and the «Место / Цена» paragraphs.
 3. Update `og:description` and the `<meta name="description">` date in `<head>`.
 
 ## Content status
@@ -68,4 +69,4 @@ The page is one block of text about the next meeting. Rules and a separate price
 - Venue is Чердак Чая (tea house), Belgrade, Despota Đurđa 5; map and directions links point to Yandex, Google and the venue's Telegram post.
 - Price is 500 dinars plus tea, with a link to the venue's menu.
 - The only contact is the owner's Telegram, `t.me/xdefrag`.
-- Topics for the next meeting are «TBA» until the owner supplies them.
+- The topics list holds a single «TBA» item until the owner supplies topics.

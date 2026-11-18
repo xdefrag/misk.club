@@ -14,21 +14,28 @@
   <link rel="icon" href="favicon.ico" sizes="48x48">
   <link rel="icon" href="favicon.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="tachyons.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-near-black helvetica lh-copy">
+<main class="pa3 center measure-wide">
 
-<h1><small>Институт</small> Мискатоник</h1>
+<h1 class="f-subheadline-ns f2 lh-solid mt0 mb3 accent"><small class="f2-ns f4 db">Институт</small> Мискатоник</h1>
 
-<!-- Перед каждой встречей: заменить afisha.jpg и текст ниже. -->
-<img src="afisha.jpg" width="1080" height="1080"
+<!-- Перед каждой встречей: заменить afisha.jpg и текст ниже.
+     Классы — из Tachyons (https://tachyons.io/docs/), свои только в style.css. -->
+<img class="db w-100 h-auto" src="afisha.jpg" width="1080" height="1080"
      alt="Афиша: новый сезон института Мискатоник, 26.11.2026, 19:00">
 
-<h2>Новый сезон</h2>
+<h2 class="f2 lh-solid mt3 mb2">Новый сезон</h2>
 
-<p><b><time datetime="2026-11-26T19:00">26 ноября, четверг, 19:00</time></b></p>
+<p class="b"><time datetime="2026-11-26T19:00">26 ноября, четверг, 19:00</time></p>
 
-<p>Темы: TBA.</p>
+<!-- Темы: по одной на строку, каждая в своём <li>…</li>. -->
+<h3 class="f4 mb1">Темы</h3>
+<ul class="f4 mt0 pl0-ns pl3 lst-square lsp-outside">
+  <li>TBA</li>
+</ul>
 
 <p>Место: Чердак Чая, Белград, Despota Đurđa 5.
 <a href="https://t.me/cardak_caja/670">Как добраться</a>,
@@ -39,5 +46,6 @@
 
 <p>По всем вопросам пиши в Telegram: <a href="https://t.me/xdefrag">@xdefrag</a>.</p>
 
+</main>
 </body>
 </html>

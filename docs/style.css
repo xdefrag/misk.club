@@ -1,28 +1,10 @@
-/* Мискатоник. По мотивам brutalist-web.design: тёмный фон, гротеск, зелёный с афиши. */
+/* Мискатоник. Вёрстка на классах Tachyons (tachyons.min.css);
+   здесь только то, чего в Tachyons нет. */
 
-html { font-size: 21px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; color-scheme: dark; }
+html { font-size: 21px; color-scheme: dark; }
+body { color: #ddd; }
 
-body {
-  max-width: 34em;
-  margin: 0 auto;
-  padding: 1rem;
-  background: #111;
-  color: #ddd;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-}
+.accent, a:link, a:visited { color: #2bff80; }
 
-h1, h2 { line-height: 1; }
-h1 { margin: 0 0 1rem; font-size: min(3rem, 13vw); color: #2bff80; }
-h1 small { display: block; font-size: 1.5rem; }
-h2 { margin: 1rem 0 .5rem; font-size: 2.25rem; }
-p { margin: 0 0 1em; }
-
-img { display: block; width: 100%; height: auto; }
-
-a:link, a:visited { color: #2bff80; }
-
-@media (min-width: 30em) {
-  h1 { font-size: 5rem; }
-  h1 small { font-size: 2.25rem; }
-}
+.lst-square { list-style-type: square; }
+.lsp-outside { list-style-position: outside; }
