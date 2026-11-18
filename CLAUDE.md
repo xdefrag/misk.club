@@ -17,6 +17,10 @@ A one-page site for the Russian-language book club «Мискатоник» (И�
 - `docs/CNAME` binds the custom domain; removing or renaming it, or the repo, while DNS still points at GitHub leaves the domain open to takeover. `docs/.nojekyll` disables Jekyll processing.
 - DNS is at Porkbun: four apex A records to GitHub Pages plus `www` CNAME to `xdefrag.github.io`.
 
+## Commits
+
+Commit messages are in English and follow Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `revert:` …), even though the site copy and conversation are in Russian.
+
 ## Previewing
 
 No tooling to install. Open `docs/index.html` in a browser, or render screenshots headlessly:
